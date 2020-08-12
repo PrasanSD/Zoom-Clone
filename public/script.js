@@ -7,7 +7,7 @@ myVideo.muted = true;
 var peer = new Peer(undefined, {
   path: "/peerjs",
   host: "/",
-  port: "3030",
+  port: "443",
 });
 
 let myVideoStream;
@@ -131,4 +131,9 @@ const setPlayVideo = () => {
       <span>Play Video</span>
     `;
   document.querySelector(".main__video_button").innerHTML = html;
+};
+
+const toggleChat = () => {
+  $(document.getElementsByClassName("main__right")).toggle();
+  $(document.getElementsByClassName("main__left")).css("flex", 1);
 };
